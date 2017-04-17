@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.usgir.myapplication.Noteask">
+
+    <ViewSwitcher
+        android:id="@+id/switcher"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/lay2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/umkc"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="138dp"
+                android:background="@android:color/white"
+                android:elevation="5dp"
+                android:onClick="create"
+                android:text="Create new Notes"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="87dp"
+                android:background="@android:color/white"
+                android:onClick="old"
+                android:text="Edit old notes"
+                android:layout_below="@+id/button"
+                android:layout_alignStart="@+id/button"
+                android:layout_alignEnd="@+id/button" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true" />
+
+        </RelativeLayout>
+
+    </ViewSwitcher>
+</android.support.constraint.ConstraintLayout>
